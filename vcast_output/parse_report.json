@@ -1,0 +1,599 @@
+{
+  "sources": [
+    {
+      "source_path": "C:\\Users\\sartjama\\Desktop\\Vcast\\tests\\fixtures\\source\\App_SLI.c",
+      "source_stem": "App_SLI",
+      "unit_name": "App_SLI",
+      "language": "c",
+      "parser_backend": "lightweight",
+      "parser_confidence": "medium",
+      "includes": [],
+      "macros": [],
+      "globals": [],
+      "types": [],
+      "enums": [],
+      "functions": [
+        {
+          "source_path": "C:\\Users\\sartjama\\Desktop\\Vcast\\tests\\fixtures\\source\\App_SLI.c",
+          "unit_name": "App_SLI",
+          "function_name": "SLI_PeriodicRunnable",
+          "qualified_name": "SLI_PeriodicRunnable",
+          "vcast_subprogram_name": "SLI_PeriodicRunnable",
+          "return_type": "void",
+          "signature": "void SLI_PeriodicRunnable(void)",
+          "parameters": [],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [
+            {
+              "expression": "(bool)FALSE == SLI_initialize",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 148,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            }
+          ],
+          "loops": [],
+          "switch_cases": [],
+          "return_paths": 0,
+          "line_start": 145,
+          "line_end": 163,
+          "is_static": false,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "source_path": "C:\\Users\\sartjama\\Desktop\\Vcast\\tests\\fixtures\\source\\App_SLI.c",
+          "unit_name": "App_SLI",
+          "function_name": "SLI_Init",
+          "qualified_name": "SLI_Init",
+          "vcast_subprogram_name": "SLI_Init",
+          "return_type": "void",
+          "signature": "void SLI_Init(void)",
+          "parameters": [],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [],
+          "loops": [],
+          "switch_cases": [],
+          "return_paths": 0,
+          "line_start": 186,
+          "line_end": 193,
+          "is_static": true,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "source_path": "C:\\Users\\sartjama\\Desktop\\Vcast\\tests\\fixtures\\source\\App_SLI.c",
+          "unit_name": "App_SLI",
+          "function_name": "SLI_MainFunction",
+          "qualified_name": "SLI_MainFunction",
+          "vcast_subprogram_name": "SLI_MainFunction",
+          "return_type": "void",
+          "signature": "void SLI_MainFunction(void)",
+          "parameters": [],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [
+            {
+              "expression": "((bool)TRUE == isEventDetected) && \n    (SLIInternalWriteSts_Capture_In_Progress != SLI_Data.SLIInternalWriteSts) &&\n    ((bool)TRUE == isSLIEnabled)",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 252,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "SLI_Trig1 == SLITrigger",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 257,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "EQ_VISION_RUNNING != EQState",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 278,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "EQEDR_RET_OK == ret",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 291,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            }
+          ],
+          "loops": [],
+          "switch_cases": [],
+          "return_paths": 0,
+          "line_start": 216,
+          "line_end": 309,
+          "is_static": true,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "source_path": "C:\\Users\\sartjama\\Desktop\\Vcast\\tests\\fixtures\\source\\App_SLI.c",
+          "unit_name": "App_SLI",
+          "function_name": "SLI_isEnabled",
+          "qualified_name": "SLI_isEnabled",
+          "vcast_subprogram_name": "SLI_isEnabled",
+          "return_type": "bool",
+          "signature": "bool SLI_isEnabled(void)",
+          "parameters": [],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [
+            {
+              "expression": "(SignalMgr_Read_Ret_OK == readRet1) && (SignalMgr_Read_Ret_OK == readRet2)",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 343,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "(GeofncngRstrctdZnSts_Unknown != SLI_RstZnConfig.GeofncngRstrctdZnSts) && \n        (GeofncngRstrctdZnSts_Restricted != SLI_RstZnConfig.GeofncngRstrctdZnSts) &&\n        ((bool)TRUE != SLI_Config.GeofenRstZonStsLossComFlt) &&\n        ((bool)FALSE != SLI_Config.GeofenRstZonStsAvl) &&\n        ((bool)TRUE != SLI_Config.GeofenRstZonStsFailSecAct)",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 345,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            }
+          ],
+          "loops": [],
+          "switch_cases": [],
+          "return_paths": 1,
+          "line_start": 332,
+          "line_end": 368,
+          "is_static": true,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "source_path": "C:\\Users\\sartjama\\Desktop\\Vcast\\tests\\fixtures\\source\\App_SLI.c",
+          "unit_name": "App_SLI",
+          "function_name": "SLI_DetectEventTrigger",
+          "qualified_name": "SLI_DetectEventTrigger",
+          "vcast_subprogram_name": "SLI_DetectEventTrigger",
+          "return_type": "bool",
+          "signature": "bool SLI_DetectEventTrigger(void)",
+          "parameters": [],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [
+            {
+              "expression": "SignalMgr_Read_Ret_OK == ret",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 400,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "((bool)FALSE == SLIPrevTrig1) && ((bool)TRUE == SLI_RcvdEvtPriority.SLITrig1)",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 403,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "((bool)FALSE == SLIPrevTrig2) && ((bool)TRUE == SLI_RcvdEvtPriority.SLITrig2)",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 409,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            }
+          ],
+          "loops": [],
+          "switch_cases": [],
+          "return_paths": 1,
+          "line_start": 391,
+          "line_end": 431,
+          "is_static": true,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "source_path": "C:\\Users\\sartjama\\Desktop\\Vcast\\tests\\fixtures\\source\\App_SLI.c",
+          "unit_name": "App_SLI",
+          "function_name": "SLI_callback_edrMultipleTriggerEvent",
+          "qualified_name": "SLI_callback_edrMultipleTriggerEvent",
+          "vcast_subprogram_name": "SLI_callback_edrMultipleTriggerEvent",
+          "return_type": "void",
+          "signature": "void SLI_callback_edrMultipleTriggerEvent(bool replyValid, uint8 replyCounter, uint32 ret, uint32 numberOfTriggerReplies, uint32 triggerReplies[])",
+          "parameters": [
+            {
+              "name": "replyValid",
+              "type": "bool",
+              "direction": "in",
+              "is_pointer": false,
+              "is_reference": false,
+              "is_const": false,
+              "is_array": false,
+              "is_struct": false,
+              "is_enum": false,
+              "default_value": null,
+              "safe_placeholder_value": null,
+              "value_confidence": "low",
+              "diagnostics": []
+            },
+            {
+              "name": "replyCounter",
+              "type": "uint8",
+              "direction": "in",
+              "is_pointer": false,
+              "is_reference": false,
+              "is_const": false,
+              "is_array": false,
+              "is_struct": false,
+              "is_enum": false,
+              "default_value": null,
+              "safe_placeholder_value": null,
+              "value_confidence": "low",
+              "diagnostics": []
+            },
+            {
+              "name": "ret",
+              "type": "uint32",
+              "direction": "in",
+              "is_pointer": false,
+              "is_reference": false,
+              "is_const": false,
+              "is_array": false,
+              "is_struct": false,
+              "is_enum": false,
+              "default_value": null,
+              "safe_placeholder_value": null,
+              "value_confidence": "low",
+              "diagnostics": []
+            },
+            {
+              "name": "numberOfTriggerReplies",
+              "type": "uint32",
+              "direction": "in",
+              "is_pointer": false,
+              "is_reference": false,
+              "is_const": false,
+              "is_array": false,
+              "is_struct": false,
+              "is_enum": false,
+              "default_value": null,
+              "safe_placeholder_value": null,
+              "value_confidence": "low",
+              "diagnostics": []
+            },
+            {
+              "name": "triggerReplies",
+              "type": "uint32",
+              "direction": "in",
+              "is_pointer": false,
+              "is_reference": false,
+              "is_const": false,
+              "is_array": true,
+              "is_struct": false,
+              "is_enum": false,
+              "default_value": null,
+              "safe_placeholder_value": null,
+              "value_confidence": "low",
+              "diagnostics": []
+            }
+          ],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [
+            {
+              "expression": "((bool)TRUE == replyValid) \n    && ((uint32)EQS_MESP_RET_OK == ret) \n    && ((uint32)SLI_NUMBER_OF_TRIG_RQST == numberOfTriggerReplies)\n    && ((uint32)EQS_MESP_RET_OK == triggerReplies[0u])\n    && ((uint32)EQS_MESP_RET_OK == triggerReplies[1u])\n    && (SLIInternalWriteSts_Capture_In_Progress == SLI_Data.SLIInternalWriteSts)",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 456,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            }
+          ],
+          "loops": [],
+          "switch_cases": [],
+          "return_paths": 0,
+          "line_start": 453,
+          "line_end": 474,
+          "is_static": true,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "source_path": "C:\\Users\\sartjama\\Desktop\\Vcast\\tests\\fixtures\\source\\App_SLI.c",
+          "unit_name": "App_SLI",
+          "function_name": "SLI_callback_edrBBformat",
+          "qualified_name": "SLI_callback_edrBBformat",
+          "vcast_subprogram_name": "SLI_callback_edrBBformat",
+          "return_type": "void",
+          "signature": "void SLI_callback_edrBBformat(uint32 ret)",
+          "parameters": [
+            {
+              "name": "ret",
+              "type": "uint32",
+              "direction": "in",
+              "is_pointer": false,
+              "is_reference": false,
+              "is_const": false,
+              "is_array": false,
+              "is_struct": false,
+              "is_enum": false,
+              "default_value": null,
+              "safe_placeholder_value": null,
+              "value_confidence": "low",
+              "diagnostics": []
+            }
+          ],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [],
+          "loops": [],
+          "switch_cases": [],
+          "return_paths": 0,
+          "line_start": 117,
+          "line_end": 117,
+          "is_static": true,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "low",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "PARSER_006_LIGHTWEIGHT_FALLBACK_USED",
+          "message": "Lightweight parser backend used.",
+          "severity": "warning",
+          "source": "C:\\Users\\sartjama\\Desktop\\Vcast\\tests\\fixtures\\source\\App_SLI.c"
+        }
+      ]
+    }
+  ]
+}

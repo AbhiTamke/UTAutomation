@@ -1,0 +1,14 @@
+openpyxl>=3.1.0
+
+# Optional: YAML parser. Built-in YAML subset parser is available.
+# PyYAML>=6.0.0
+
+# Optional: required for .eapx/.eap Access GUID extraction on Windows.
+# pyodbc>=5.0.0
+
+# Optional: required for EA COM fallback on Windows with Enterprise Architect installed.
+# pywin32>=306; platform_system == "Windows"
+
+# Optional: tree-sitter primary parser support.
+# tree-sitter>=0.20.0
+# tree-sitter-languages>=1.10.0

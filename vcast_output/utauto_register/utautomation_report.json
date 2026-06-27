@@ -1,0 +1,2892 @@
+{
+  "summary": {
+    "source_files": 1,
+    "generated_tst_files": 1,
+    "validation_enabled": true,
+    "eapx_enabled": true
+  },
+  "sources": [
+    {
+      "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+      "source_stem": "RegisterProt",
+      "unit_name": "RegisterProt",
+      "language": "c",
+      "parser_backend": "lightweight",
+      "parser_confidence": "medium",
+      "includes": [],
+      "macros": [],
+      "globals": [],
+      "types": [],
+      "enums": [],
+      "functions": [
+        {
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "unit_name": "RegisterProt",
+          "function_name": "registerProt_F_UnLockProt",
+          "qualified_name": "registerProt_F_UnLockProt",
+          "vcast_subprogram_name": "registerProt_F_UnLockProt",
+          "return_type": "McalUtil_ProtStateType",
+          "signature": "McalUtil_ProtStateType registerProt_F_UnLockProt(volatile uint32 * const ProtPtr)",
+          "parameters": [
+            {
+              "name": "ProtPtr",
+              "type": "uint32 *",
+              "direction": "in",
+              "is_pointer": true,
+              "is_reference": false,
+              "is_const": true,
+              "is_array": false,
+              "is_struct": false,
+              "is_enum": false,
+              "default_value": null,
+              "safe_placeholder_value": null,
+              "value_confidence": "low",
+              "diagnostics": []
+            }
+          ],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [
+            {
+              "expression": "MCALUTIL_PROT_STATE_INIT == ProtState",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 240,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "MCALUTIL_PROT_STATE_RUN == ProtState",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 252,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            }
+          ],
+          "loops": [],
+          "switch_cases": [],
+          "return_paths": 1,
+          "line_start": 233,
+          "line_end": 263,
+          "is_static": false,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "unit_name": "RegisterProt",
+          "function_name": "registerProt_F_LockProt",
+          "qualified_name": "registerProt_F_LockProt",
+          "vcast_subprogram_name": "registerProt_F_LockProt",
+          "return_type": "void",
+          "signature": "void registerProt_F_LockProt(const McalUtil_ProtStateType ProtState, volatile uint32 * const ProtPtr)",
+          "parameters": [
+            {
+              "name": "ProtState",
+              "type": "McalUtil_ProtStateType",
+              "direction": "in",
+              "is_pointer": false,
+              "is_reference": false,
+              "is_const": true,
+              "is_array": false,
+              "is_struct": false,
+              "is_enum": false,
+              "default_value": null,
+              "safe_placeholder_value": null,
+              "value_confidence": "low",
+              "diagnostics": []
+            },
+            {
+              "name": "ProtPtr",
+              "type": "uint32 *",
+              "direction": "in",
+              "is_pointer": true,
+              "is_reference": false,
+              "is_const": true,
+              "is_array": false,
+              "is_struct": false,
+              "is_enum": false,
+              "default_value": null,
+              "safe_placeholder_value": null,
+              "value_confidence": "low",
+              "diagnostics": []
+            }
+          ],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [
+            {
+              "expression": "MCALUTIL_PROT_STATE_RUN == ProtState",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 274,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            }
+          ],
+          "loops": [],
+          "switch_cases": [],
+          "return_paths": 0,
+          "line_start": 270,
+          "line_end": 283,
+          "is_static": false,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "unit_name": "RegisterProt",
+          "function_name": "registerProt_F_UnLockDmaRpProt",
+          "qualified_name": "registerProt_F_UnLockDmaRpProt",
+          "vcast_subprogram_name": "registerProt_F_UnLockDmaRpProt",
+          "return_type": "void",
+          "signature": "void registerProt_F_UnLockDmaRpProt(void)",
+          "parameters": [],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [],
+          "loops": [
+            {
+              "kind": "for",
+              "condition": "v_rp_idx_u8 = 0u; v_rp_idx_u8 < (uint8)REGPROT_DMA_RP_CNT; v_rp_idx_u8++",
+              "line_number": 294
+            }
+          ],
+          "switch_cases": [],
+          "return_paths": 0,
+          "line_start": 291,
+          "line_end": 300,
+          "is_static": false,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "unit_name": "RegisterProt",
+          "function_name": "registerProt_F_LockDmaRpProt",
+          "qualified_name": "registerProt_F_LockDmaRpProt",
+          "vcast_subprogram_name": "registerProt_F_LockDmaRpProt",
+          "return_type": "void",
+          "signature": "void registerProt_F_LockDmaRpProt(void)",
+          "parameters": [],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [],
+          "loops": [
+            {
+              "kind": "for",
+              "condition": "v_rp_idx_u8 = 0u; v_rp_idx_u8 < (uint8)REGPROT_DMA_RP_CNT; v_rp_idx_u8++",
+              "line_number": 311
+            }
+          ],
+          "switch_cases": [],
+          "return_paths": 0,
+          "line_start": 308,
+          "line_end": 317,
+          "is_static": false,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "unit_name": "RegisterProt",
+          "function_name": "registerProt_F_UnLockQspiProt",
+          "qualified_name": "registerProt_F_UnLockQspiProt",
+          "vcast_subprogram_name": "registerProt_F_UnLockQspiProt",
+          "return_type": "void",
+          "signature": "void registerProt_F_UnLockQspiProt(void)",
+          "parameters": [],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [],
+          "loops": [
+            {
+              "kind": "for",
+              "condition": "v_qspi_idx_u8 = 0u; v_qspi_idx_u8 < (uint8)REGPROT_QSPI_HW_CNT; v_qspi_idx_u8++",
+              "line_number": 328
+            }
+          ],
+          "switch_cases": [],
+          "return_paths": 0,
+          "line_start": 325,
+          "line_end": 334,
+          "is_static": false,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "unit_name": "RegisterProt",
+          "function_name": "registerProt_F_LockQspiProt",
+          "qualified_name": "registerProt_F_LockQspiProt",
+          "vcast_subprogram_name": "registerProt_F_LockQspiProt",
+          "return_type": "void",
+          "signature": "void registerProt_F_LockQspiProt(void)",
+          "parameters": [],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [],
+          "loops": [
+            {
+              "kind": "for",
+              "condition": "v_qspi_idx_u8 = 0u; v_qspi_idx_u8 < (uint8)REGPROT_QSPI_HW_CNT; v_qspi_idx_u8++",
+              "line_number": 345
+            }
+          ],
+          "switch_cases": [],
+          "return_paths": 0,
+          "line_start": 342,
+          "line_end": 351,
+          "is_static": false,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "unit_name": "RegisterProt",
+          "function_name": "registerProt_F_enable_v",
+          "qualified_name": "registerProt_F_enable_v",
+          "vcast_subprogram_name": "registerProt_F_enable_v",
+          "return_type": "void",
+          "signature": "void registerProt_F_enable_v(void)",
+          "parameters": [],
+          "globals_read": [],
+          "globals_written": [],
+          "calls": [],
+          "internal_calls": [],
+          "external_calls": [],
+          "unresolved_calls": [],
+          "conditions": [
+            {
+              "expression": "v_idx_u8 == 9u",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 621,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "v_idx_u8 == 9u",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 632,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "v_idx_u8 == 9u",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 656,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "v_idx_u8 == 9u",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 679,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "(v_idx_u8 == 11u) || (v_idx_u8 == 13u) || (v_idx_u8 == 14u) || (v_idx_u8 == 16u)\n            || (v_idx_u8 == 17u) || (v_idx_u8 == 19u) || (v_idx_u8 == 20u)",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 820,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "v_idx_u8_grp >= 4u",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 823,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "(v_idx_u8 == 11u) || (v_idx_u8 == 13u) || (v_idx_u8 == 14u) || (v_idx_u8 == 16u)\n            || (v_idx_u8 == 17u) || (v_idx_u8 == 19u) || (v_idx_u8 == 20u)",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 837,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "v_idx_u8_grp >= 4u",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 840,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "(v_idx_u8 == 11u) || (v_idx_u8 == 13u) || (v_idx_u8 == 14u) || (v_idx_u8 == 16u)\n            || (v_idx_u8 == 17u) || (v_idx_u8 == 19u) || (v_idx_u8 == 20u)",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 886,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            },
+            {
+              "expression": "v_idx_u8_grp >= 4u",
+              "normalized_expression": "",
+              "kind": "if",
+              "line_start": 889,
+              "line_end": 0,
+              "branch_intents": [
+                "true",
+                "false"
+              ],
+              "referenced_parameters": [],
+              "referenced_globals": [],
+              "referenced_constants": [],
+              "calls_inside_condition": [],
+              "parser_confidence": "medium",
+              "input_confidence": "low",
+              "coverage_confidence": "intent-only",
+              "diagnostics": []
+            }
+          ],
+          "loops": [
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_ADC_PROTE_CNT; v_idx_u8++",
+              "line_number": 366
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_ADC_PROTE_CNT; v_idx_u8++",
+              "line_number": 375
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_ADC_ACCEN_CNT; v_idx_u8++",
+              "line_number": 382
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_ADC_PROTE_CNT; v_idx_u8++",
+              "line_number": 395
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_CAN_HW_CNT; v_idx_u8++",
+              "line_number": 402
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_BCU_HW_CNT; v_idx_u8++",
+              "line_number": 459
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_I2C_HW_CNT; v_idx_u8++",
+              "line_number": 494
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_QSPI_HW_CNT; v_idx_u8++",
+              "line_number": 524
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_XSPI_HW_CNT; v_idx_u8++",
+              "line_number": 554
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_DRE_HW_CNT; v_idx_u8++",
+              "line_number": 584
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_INT_PROTTOS_CNT; v_idx_u8++",
+              "line_number": 619
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_INT_PROTTOS_CNT; v_idx_u8++",
+              "line_number": 630
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_INT_ACCENSRB_CNT; v_idx_u8++",
+              "line_number": 644
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_INT_PROTTOS_CNT; v_idx_u8++",
+              "line_number": 654
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_INT_PROTTOS_CNT; v_idx_u8++",
+              "line_number": 677
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_LMU_HW_CNT; v_idx_u8++",
+              "line_number": 686
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_PORT_HW_CNT; v_idx_u8++",
+              "line_number": 812
+            },
+            {
+              "kind": "for",
+              "condition": "uint8 v_idx_u8_grp = 0; v_idx_u8_grp < (uint8)REGPROT_PORT_ACCGRP_CNT; v_idx_u8_grp++",
+              "line_number": 818
+            },
+            {
+              "kind": "for",
+              "condition": "uint8 v_idx_u8_grp = 0; v_idx_u8_grp < (uint8)REGPROT_PORT_ACCGRP_CNT; v_idx_u8_grp++",
+              "line_number": 835
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_PORT_HW_CNT; v_idx_u8++",
+              "line_number": 878
+            },
+            {
+              "kind": "for",
+              "condition": "uint8 v_idx_u8_grp = 0; v_idx_u8_grp < (uint8)REGPROT_PORT_ACCGRP_CNT; v_idx_u8_grp++",
+              "line_number": 884
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_SMM_CPU_CNT; v_idx_u8++",
+              "line_number": 919
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_SMM_CPU_CNT; v_idx_u8++",
+              "line_number": 930
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_SMM_CPU_CNT; v_idx_u8++",
+              "line_number": 949
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_SCU_ACCENGRP_CNT; v_idx_u8++",
+              "line_number": 1008
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_DOM_HW_CNT; v_idx_u8++",
+              "line_number": 1024
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_VMT_HW_CNT; v_idx_u8++",
+              "line_number": 1051
+            },
+            {
+              "kind": "for",
+              "condition": "v_idx_u8 = 0; v_idx_u8 < (uint8)REGPROT_DMA_HW_CNT; v_idx_u8++",
+              "line_number": 1149
+            },
+            {
+              "kind": "for",
+              "condition": "uint8 v_rp_idx_u8 = 0; v_rp_idx_u8 < (uint8)REGPROT_DMA_RP_CNT; v_rp_idx_u8++",
+              "line_number": 1164
+            }
+          ],
+          "switch_cases": [],
+          "return_paths": 0,
+          "line_start": 358,
+          "line_end": 1218,
+          "is_static": false,
+          "is_public": false,
+          "is_class_method": false,
+          "class_name": "",
+          "namespace": "",
+          "parser_backend": "lightweight",
+          "parser_confidence": "medium",
+          "qualification_confidence": "low",
+          "diagnostics": [
+            {
+              "code": "PARSER_008_CPP_QUALIFICATION_LOW_CONFIDENCE",
+              "message": "C++ class qualification was not proven; using unqualified subprogram name.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "PARSER_006_LIGHTWEIGHT_FALLBACK_USED",
+          "message": "Lightweight parser backend used.",
+          "severity": "warning",
+          "source": "tests\\fixtures\\source\\RegisterProt.c"
+        }
+      ]
+    }
+  ],
+  "generated": [
+    {
+      "output_path": "vcast_output\\utauto_register\\RegisterProt.tst",
+      "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+      "unit_name": "RegisterProt",
+      "test_cases": [
+        {
+          "test_case_id": "TC_registerProt_F_UnLockProt_UT_001",
+          "test_name": "TC_registerProt_F_UnLockProt_UT_001",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockProt",
+          "family": "baseline",
+          "description": "Baseline skeleton test for function registerProt_F_UnLockProt.",
+          "coverage_intent": "Baseline execution intent.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{46A917D2-6243-4558-9276-F95554FA7E8C}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "Parameter ProtPtr of type uint32 * requires explicit/manual VectorCAST assignment.",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_UnLockProt_UT_002",
+          "test_name": "TC_registerProt_F_UnLockProt_UT_002",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockProt",
+          "family": "condition_true",
+          "description": "Targets true branch of condition MCALUTIL_PROT_STATE_INIT == ProtState.",
+          "coverage_intent": "Intent-only true branch for condition at line 240.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{46A917D2-6243-4558-9276-F95554FA7E8C}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "Parameter ProtPtr of type uint32 * requires explicit/manual VectorCAST assignment.",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_UnLockProt_UT_003",
+          "test_name": "TC_registerProt_F_UnLockProt_UT_003",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockProt",
+          "family": "condition_false",
+          "description": "Targets false branch of condition MCALUTIL_PROT_STATE_INIT == ProtState.",
+          "coverage_intent": "Intent-only false branch for condition at line 240.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{46A917D2-6243-4558-9276-F95554FA7E8C}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "Parameter ProtPtr of type uint32 * requires explicit/manual VectorCAST assignment.",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_UnLockProt_UT_004",
+          "test_name": "TC_registerProt_F_UnLockProt_UT_004",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockProt",
+          "family": "condition_true",
+          "description": "Targets true branch of condition MCALUTIL_PROT_STATE_RUN == ProtState.",
+          "coverage_intent": "Intent-only true branch for condition at line 252.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{46A917D2-6243-4558-9276-F95554FA7E8C}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "Parameter ProtPtr of type uint32 * requires explicit/manual VectorCAST assignment.",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_UnLockProt_UT_005",
+          "test_name": "TC_registerProt_F_UnLockProt_UT_005",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockProt",
+          "family": "condition_false",
+          "description": "Targets false branch of condition MCALUTIL_PROT_STATE_RUN == ProtState.",
+          "coverage_intent": "Intent-only false branch for condition at line 252.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{46A917D2-6243-4558-9276-F95554FA7E8C}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "Parameter ProtPtr of type uint32 * requires explicit/manual VectorCAST assignment.",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_LockProt_UT_001",
+          "test_name": "TC_registerProt_F_LockProt_UT_001",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_LockProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_LockProt",
+          "family": "baseline",
+          "description": "Baseline skeleton test for function registerProt_F_LockProt.",
+          "coverage_intent": "Baseline execution intent.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{EAB3752E-E555-4428-84A9-FAEEDC5A6AB8}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "Parameter ProtState of type McalUtil_ProtStateType requires explicit/manual VectorCAST assignment. Parameter ProtPtr of type uint32 * requires explicit/manual VectorCAST assignment.",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_LockProt_UT_002",
+          "test_name": "TC_registerProt_F_LockProt_UT_002",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_LockProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_LockProt",
+          "family": "condition_true",
+          "description": "Targets true branch of condition MCALUTIL_PROT_STATE_RUN == ProtState.",
+          "coverage_intent": "Intent-only true branch for condition at line 274.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{EAB3752E-E555-4428-84A9-FAEEDC5A6AB8}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "Parameter ProtState of type McalUtil_ProtStateType requires explicit/manual VectorCAST assignment. Parameter ProtPtr of type uint32 * requires explicit/manual VectorCAST assignment.",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_LockProt_UT_003",
+          "test_name": "TC_registerProt_F_LockProt_UT_003",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_LockProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_LockProt",
+          "family": "condition_false",
+          "description": "Targets false branch of condition MCALUTIL_PROT_STATE_RUN == ProtState.",
+          "coverage_intent": "Intent-only false branch for condition at line 274.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{EAB3752E-E555-4428-84A9-FAEEDC5A6AB8}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "Parameter ProtState of type McalUtil_ProtStateType requires explicit/manual VectorCAST assignment. Parameter ProtPtr of type uint32 * requires explicit/manual VectorCAST assignment.",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_UnLockDmaRpProt_UT_001",
+          "test_name": "TC_registerProt_F_UnLockDmaRpProt_UT_001",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockDmaRpProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockDmaRpProt",
+          "family": "baseline",
+          "description": "Baseline skeleton test for function registerProt_F_UnLockDmaRpProt.",
+          "coverage_intent": "Baseline execution intent.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{237B5B94-1AA7-426f-B2AA-15110025774C}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_UnLockDmaRpProt_UT_002",
+          "test_name": "TC_registerProt_F_UnLockDmaRpProt_UT_002",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockDmaRpProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockDmaRpProt",
+          "family": "loop_zero",
+          "description": "Targets loop_zero intent for for loop.",
+          "coverage_intent": "Intent-only loop path for for at line 294.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{237B5B94-1AA7-426f-B2AA-15110025774C}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_UnLockDmaRpProt_UT_003",
+          "test_name": "TC_registerProt_F_UnLockDmaRpProt_UT_003",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockDmaRpProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockDmaRpProt",
+          "family": "loop_one",
+          "description": "Targets loop_one intent for for loop.",
+          "coverage_intent": "Intent-only loop path for for at line 294.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{237B5B94-1AA7-426f-B2AA-15110025774C}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_UnLockDmaRpProt_UT_004",
+          "test_name": "TC_registerProt_F_UnLockDmaRpProt_UT_004",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockDmaRpProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockDmaRpProt",
+          "family": "loop_many",
+          "description": "Targets loop_many intent for for loop.",
+          "coverage_intent": "Intent-only loop path for for at line 294.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{237B5B94-1AA7-426f-B2AA-15110025774C}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_LockDmaRpProt_UT_001",
+          "test_name": "TC_registerProt_F_LockDmaRpProt_UT_001",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_LockDmaRpProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_LockDmaRpProt",
+          "family": "baseline",
+          "description": "Baseline skeleton test for function registerProt_F_LockDmaRpProt.",
+          "coverage_intent": "Baseline execution intent.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{9F0E9161-3780-4fbb-88F1-A441DE06694D}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_LockDmaRpProt_UT_002",
+          "test_name": "TC_registerProt_F_LockDmaRpProt_UT_002",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_LockDmaRpProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_LockDmaRpProt",
+          "family": "loop_zero",
+          "description": "Targets loop_zero intent for for loop.",
+          "coverage_intent": "Intent-only loop path for for at line 311.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{9F0E9161-3780-4fbb-88F1-A441DE06694D}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_LockDmaRpProt_UT_003",
+          "test_name": "TC_registerProt_F_LockDmaRpProt_UT_003",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_LockDmaRpProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_LockDmaRpProt",
+          "family": "loop_one",
+          "description": "Targets loop_one intent for for loop.",
+          "coverage_intent": "Intent-only loop path for for at line 311.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{9F0E9161-3780-4fbb-88F1-A441DE06694D}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_LockDmaRpProt_UT_004",
+          "test_name": "TC_registerProt_F_LockDmaRpProt_UT_004",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_LockDmaRpProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_LockDmaRpProt",
+          "family": "loop_many",
+          "description": "Targets loop_many intent for for loop.",
+          "coverage_intent": "Intent-only loop path for for at line 311.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{9F0E9161-3780-4fbb-88F1-A441DE06694D}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_UnLockQspiProt_UT_001",
+          "test_name": "TC_registerProt_F_UnLockQspiProt_UT_001",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockQspiProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockQspiProt",
+          "family": "baseline",
+          "description": "Baseline skeleton test for function registerProt_F_UnLockQspiProt.",
+          "coverage_intent": "Baseline execution intent.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{77F7CDC8-5713-402d-928E-4915A6336CC6}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_UnLockQspiProt_UT_002",
+          "test_name": "TC_registerProt_F_UnLockQspiProt_UT_002",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockQspiProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockQspiProt",
+          "family": "loop_zero",
+          "description": "Targets loop_zero intent for for loop.",
+          "coverage_intent": "Intent-only loop path for for at line 328.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{77F7CDC8-5713-402d-928E-4915A6336CC6}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_UnLockQspiProt_UT_003",
+          "test_name": "TC_registerProt_F_UnLockQspiProt_UT_003",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockQspiProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockQspiProt",
+          "family": "loop_one",
+          "description": "Targets loop_one intent for for loop.",
+          "coverage_intent": "Intent-only loop path for for at line 328.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{77F7CDC8-5713-402d-928E-4915A6336CC6}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_UnLockQspiProt_UT_004",
+          "test_name": "TC_registerProt_F_UnLockQspiProt_UT_004",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_UnLockQspiProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_UnLockQspiProt",
+          "family": "loop_many",
+          "description": "Targets loop_many intent for for loop.",
+          "coverage_intent": "Intent-only loop path for for at line 328.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{77F7CDC8-5713-402d-928E-4915A6336CC6}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_LockQspiProt_UT_001",
+          "test_name": "TC_registerProt_F_LockQspiProt_UT_001",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_LockQspiProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_LockQspiProt",
+          "family": "baseline",
+          "description": "Baseline skeleton test for function registerProt_F_LockQspiProt.",
+          "coverage_intent": "Baseline execution intent.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{5CD41DB5-FB72-48fb-B8D1-44487A2FB6E8}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_LockQspiProt_UT_002",
+          "test_name": "TC_registerProt_F_LockQspiProt_UT_002",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_LockQspiProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_LockQspiProt",
+          "family": "loop_zero",
+          "description": "Targets loop_zero intent for for loop.",
+          "coverage_intent": "Intent-only loop path for for at line 345.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{5CD41DB5-FB72-48fb-B8D1-44487A2FB6E8}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_LockQspiProt_UT_003",
+          "test_name": "TC_registerProt_F_LockQspiProt_UT_003",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_LockQspiProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_LockQspiProt",
+          "family": "loop_one",
+          "description": "Targets loop_one intent for for loop.",
+          "coverage_intent": "Intent-only loop path for for at line 345.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{5CD41DB5-FB72-48fb-B8D1-44487A2FB6E8}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_LockQspiProt_UT_004",
+          "test_name": "TC_registerProt_F_LockQspiProt_UT_004",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_LockQspiProt",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_LockQspiProt",
+          "family": "loop_many",
+          "description": "Targets loop_many intent for for loop.",
+          "coverage_intent": "Intent-only loop path for for at line 345.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{5CD41DB5-FB72-48fb-B8D1-44487A2FB6E8}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_001",
+          "test_name": "TC_registerProt_F_enable_v_UT_001",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "baseline",
+          "description": "Baseline skeleton test for function registerProt_F_enable_v.",
+          "coverage_intent": "Baseline execution intent.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_002",
+          "test_name": "TC_registerProt_F_enable_v_UT_002",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_true",
+          "description": "Targets true branch of condition v_idx_u8 == 9u.",
+          "coverage_intent": "Intent-only true branch for condition at line 621.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_003",
+          "test_name": "TC_registerProt_F_enable_v_UT_003",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_false",
+          "description": "Targets false branch of condition v_idx_u8 == 9u.",
+          "coverage_intent": "Intent-only false branch for condition at line 621.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_004",
+          "test_name": "TC_registerProt_F_enable_v_UT_004",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_true",
+          "description": "Targets true branch of condition v_idx_u8 == 9u.",
+          "coverage_intent": "Intent-only true branch for condition at line 632.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_005",
+          "test_name": "TC_registerProt_F_enable_v_UT_005",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_false",
+          "description": "Targets false branch of condition v_idx_u8 == 9u.",
+          "coverage_intent": "Intent-only false branch for condition at line 632.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_006",
+          "test_name": "TC_registerProt_F_enable_v_UT_006",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_true",
+          "description": "Targets true branch of condition v_idx_u8 == 9u.",
+          "coverage_intent": "Intent-only true branch for condition at line 656.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_007",
+          "test_name": "TC_registerProt_F_enable_v_UT_007",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_false",
+          "description": "Targets false branch of condition v_idx_u8 == 9u.",
+          "coverage_intent": "Intent-only false branch for condition at line 656.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_008",
+          "test_name": "TC_registerProt_F_enable_v_UT_008",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_true",
+          "description": "Targets true branch of condition v_idx_u8 == 9u.",
+          "coverage_intent": "Intent-only true branch for condition at line 679.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_009",
+          "test_name": "TC_registerProt_F_enable_v_UT_009",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_false",
+          "description": "Targets false branch of condition v_idx_u8 == 9u.",
+          "coverage_intent": "Intent-only false branch for condition at line 679.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_010",
+          "test_name": "TC_registerProt_F_enable_v_UT_010",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_true",
+          "description": "Targets true branch of condition (v_idx_u8 == 11u) || (v_idx_u8 == 13u) || (v_idx_u8 == 14u) || (v_idx_u8 == 16u)\n            || (v_idx_u8 == 17u) || (v_idx_u8 == 19u) || (v_idx_u8 == 20u).",
+          "coverage_intent": "Intent-only true branch for condition at line 820.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_011",
+          "test_name": "TC_registerProt_F_enable_v_UT_011",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_false",
+          "description": "Targets false branch of condition (v_idx_u8 == 11u) || (v_idx_u8 == 13u) || (v_idx_u8 == 14u) || (v_idx_u8 == 16u)\n            || (v_idx_u8 == 17u) || (v_idx_u8 == 19u) || (v_idx_u8 == 20u).",
+          "coverage_intent": "Intent-only false branch for condition at line 820.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_012",
+          "test_name": "TC_registerProt_F_enable_v_UT_012",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_true",
+          "description": "Targets true branch of condition v_idx_u8_grp >= 4u.",
+          "coverage_intent": "Intent-only true branch for condition at line 823.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_013",
+          "test_name": "TC_registerProt_F_enable_v_UT_013",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_false",
+          "description": "Targets false branch of condition v_idx_u8_grp >= 4u.",
+          "coverage_intent": "Intent-only false branch for condition at line 823.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_014",
+          "test_name": "TC_registerProt_F_enable_v_UT_014",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_true",
+          "description": "Targets true branch of condition (v_idx_u8 == 11u) || (v_idx_u8 == 13u) || (v_idx_u8 == 14u) || (v_idx_u8 == 16u)\n            || (v_idx_u8 == 17u) || (v_idx_u8 == 19u) || (v_idx_u8 == 20u).",
+          "coverage_intent": "Intent-only true branch for condition at line 837.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_015",
+          "test_name": "TC_registerProt_F_enable_v_UT_015",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_false",
+          "description": "Targets false branch of condition (v_idx_u8 == 11u) || (v_idx_u8 == 13u) || (v_idx_u8 == 14u) || (v_idx_u8 == 16u)\n            || (v_idx_u8 == 17u) || (v_idx_u8 == 19u) || (v_idx_u8 == 20u).",
+          "coverage_intent": "Intent-only false branch for condition at line 837.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_016",
+          "test_name": "TC_registerProt_F_enable_v_UT_016",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_true",
+          "description": "Targets true branch of condition v_idx_u8_grp >= 4u.",
+          "coverage_intent": "Intent-only true branch for condition at line 840.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_017",
+          "test_name": "TC_registerProt_F_enable_v_UT_017",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_false",
+          "description": "Targets false branch of condition v_idx_u8_grp >= 4u.",
+          "coverage_intent": "Intent-only false branch for condition at line 840.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_018",
+          "test_name": "TC_registerProt_F_enable_v_UT_018",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_true",
+          "description": "Targets true branch of condition (v_idx_u8 == 11u) || (v_idx_u8 == 13u) || (v_idx_u8 == 14u) || (v_idx_u8 == 16u)\n            || (v_idx_u8 == 17u) || (v_idx_u8 == 19u) || (v_idx_u8 == 20u).",
+          "coverage_intent": "Intent-only true branch for condition at line 886.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_019",
+          "test_name": "TC_registerProt_F_enable_v_UT_019",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_false",
+          "description": "Targets false branch of condition (v_idx_u8 == 11u) || (v_idx_u8 == 13u) || (v_idx_u8 == 14u) || (v_idx_u8 == 16u)\n            || (v_idx_u8 == 17u) || (v_idx_u8 == 19u) || (v_idx_u8 == 20u).",
+          "coverage_intent": "Intent-only false branch for condition at line 886.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        },
+        {
+          "test_case_id": "TC_registerProt_F_enable_v_UT_020",
+          "test_name": "TC_registerProt_F_enable_v_UT_020",
+          "unit_name": "RegisterProt",
+          "subprogram_name": "registerProt_F_enable_v",
+          "source_path": "tests\\fixtures\\source\\RegisterProt.c",
+          "function_name": "registerProt_F_enable_v",
+          "family": "condition_true",
+          "description": "Targets true branch of condition v_idx_u8_grp >= 4u.",
+          "coverage_intent": "Intent-only true branch for condition at line 889.",
+          "input_values": {},
+          "expected_values": {},
+          "raw_value_lines": [],
+          "stub_lines": [],
+          "raw_expected_lines": [],
+          "expected_confidence": "none",
+          "requirement_keys": [],
+          "review_id": "TBD",
+          "guid": "{1483FE8F-6430-4266-976C-A06E0B36CC67}",
+          "status": "In Review",
+          "asil": [
+            "Statement Coverage",
+            "Branch Coverage",
+            "MC/DC Coverage",
+            "control flow verification",
+            "visual inspection"
+          ],
+          "priority": "High",
+          "notes": "",
+          "generation_mode": "skeleton",
+          "generation_reason": "static parser planning",
+          "parser_confidence": "medium",
+          "input_confidence": "low",
+          "coverage_confidence": "intent-only",
+          "traceability_status": "unresolved",
+          "diagnostics": [
+            {
+              "code": "PLAN_004_EXPECTED_VALUE_NOT_PROVEN",
+              "message": "TEST.EXPECTED omitted unless supplied by explicit mapping/rule.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_002_BRANCH_TARGET_NOT_GUARANTEED",
+              "message": "Branch target is intent-only; no guaranteed input solving is performed.",
+              "severity": "warning",
+              "source": null
+            },
+            {
+              "code": "PLAN_005_TEST_LIMIT_REACHED",
+              "message": "Function test count exceeded max_tests_per_function=20; extra cases skipped.",
+              "severity": "warning",
+              "source": null
+            }
+          ]
+        }
+      ],
+      "header": "",
+      "script_features": [
+        "C_DIRECT_ARRAY_INDEXING",
+        "CPP_CLASS_OBJECT_REVISION",
+        "MULTIPLE_UUT_SUPPORT",
+        "REMOVED_CL_PREFIX",
+        "MIXED_CASE_NAMES",
+        "STATIC_HEADER_FUNCS_IN_UUTS",
+        "VCAST_MAIN_NOT_RENAMED"
+      ],
+      "diagnostics": [],
+      "validation_status": "not_run"
+    }
+  ],
+  "validation": [
+    {
+      "path": "vcast_output\\utauto_register\\RegisterProt.tst",
+      "diagnostics": [
+        {
+          "code": "TST_006_UNRESOLVED_REVIEWID_TBD",
+          "message": "Unresolved ReviewID marked as TBD.",
+          "severity": "warning",
+          "source": "vcast_output\\utauto_register\\RegisterProt.tst"
+        }
+      ]
+    }
+  ]
+}
