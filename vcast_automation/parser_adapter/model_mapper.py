@@ -96,6 +96,9 @@ def map_parsed_file_to_source_model(parsed: ParsedFile) -> SourceFileModel:
                 is_reference=p.is_reference,
                 is_const=p.is_const,
                 is_array=p.is_array,
+                # Extended fields for richer analysis
+                base_type=_infer_base_type(p.type),
+                pointer_depth=_count_pointer_depth(p.is_pointer, p.type),
             )
             for p in fn.parameters
             if p.name
@@ -148,8 +151,140 @@ def map_parsed_file_to_source_model(parsed: ParsedFile) -> SourceFileModel:
             parser_confidence=fn.parser_confidence,
             qualification_confidence=qualification_confidence,
             diagnostics=diagnostics,
+            # Extended fields for analysis
+            globals_read=getattr(fn, 'globals_read', []),
+            globals_written=getattr(fn, 'globals_written', []),
+            calls=getattr(fn, 'calls', []),
+            internal_calls=getattr(fn, 'internal_calls', []),
+            external_calls=getattr(fn, 'external_calls', []),
         )
+
+        # Post-process to extract constraints and infer dependencies
+        try:
+            from vcast_automation.parser_engine.constraint_extractor import (
+                extract_simple_constraints,
+                extract_condition_targets,
+                tag_potentially_unreachable,
+            )
+
+            # Extract constraints from conditions
+            constraints = extract_simple_constraints(function_model)
+            
+            # Tag unreachable code
+            unreachable_diagnostics = tag_potentially_unreachable(function_model)
+            function_model.diagnostics.extend(unreachable_diagnostics)
+            
+            # Infer parameter dependencies
+            function_model.input_dependencies = _infer_input_dependencies(
+                function_model, constraints
+            )
+        except Exception as exc:
+            # Gracefully skip constraint extraction if it fails
+            function_model.diagnostics.append(
+                Diagnostic(
+                    code="CONSTRAINT_EXTRACTION_ERROR",
+                    message=f"Constraint extraction failed: {exc}",
+                    severity="warning",
+                )
+            )
 
         source.functions.append(function_model)
 
     return source
+
+
+# Helper functions for constraint extraction and dependency inference
+
+def _infer_base_type(type_str: str) -> str:
+    """Extract base type from pointer/array notation."""
+    base = type_str.replace("*", "").replace("[]", "").replace("&", "").strip()
+    return base
+
+
+def _count_pointer_depth(is_pointer: bool, type_str: str) -> int:
+    """Count the depth of pointer indirection."""
+    if not is_pointer:
+        return 0
+    # Simple count of * in type string
+    return type_str.count("*")
+
+
+def _infer_input_dependencies(function_model: FunctionModel, constraints: dict) -> list[dict]:
+    """
+    Infer parameter input dependencies from naming patterns and constraints.
+    
+    Detects:
+    - Size/buffer pairs (array_size -> array)
+    - Pointer validity flags (ptr -> is_valid_ptr)
+    - Output parameters (out_* patterns)
+    """
+    dependencies = []
+    param_names = {p.name for p in function_model.parameters}
+    
+    for param in function_model.parameters:
+        dep_list = []
+        
+        # Size/buffer detection
+        if _is_size_like(param.name):
+            for other in function_model.parameters:
+                if _is_buffer_like(other.name) and _names_match_pair(param.name, other.name):
+                    dep_list.append({
+                        "type": "size_of",
+                        "target": other.name,
+                        "confidence": "high" if other.is_pointer or other.is_array else "medium",
+                    })
+        
+        # Validity flag detection
+        if _is_validity_flag(param.name):
+            for other in function_model.parameters:
+                if other.is_pointer and _names_match_pair(param.name, other.name):
+                    dep_list.append({
+                        "type": "validity_flag_for",
+                        "target": other.name,
+                        "confidence": "medium",
+                    })
+        
+        if dep_list:
+            dependencies.append({
+                "parameter": param.name,
+                "dependencies": dep_list,
+            })
+    
+    return dependencies
+
+
+def _is_size_like(name: str) -> bool:
+    """Check if name suggests a size/length parameter."""
+    lower = name.lower()
+    return any(
+        hint in lower
+        for hint in ("size", "length", "len", "count", "num", "nelem", "n_", "nbytes")
+    )
+
+
+def _is_buffer_like(name: str) -> bool:
+    """Check if name suggests a buffer/array parameter."""
+    lower = name.lower()
+    return any(
+        hint in lower
+        for hint in ("buf", "array", "data", "ptr", "p_", "buffer", "arr")
+    )
+
+
+def _is_validity_flag(name: str) -> bool:
+    """Check if name suggests a validity/allocated flag."""
+    lower = name.lower()
+    return any(
+        hint in lower
+        for hint in ("valid", "allocated", "is_valid", "is_allocated", "allocated_", "valid_")
+    )
+
+
+def _names_match_pair(size_name: str, buffer_name: str) -> bool:
+    """Check if size and buffer names are related."""
+    # Remove common affixes and compare what's left
+    size_stem = size_name.lower().replace("size", "").replace("length", "").replace("len", "").replace("count", "").replace("_", "")
+    buffer_stem = buffer_name.lower().replace("buf", "").replace("buffer", "").replace("data", "").replace("ptr", "").replace("p_", "").replace("array", "").replace("arr", "").replace("_", "")
+    
+    # Direct substring match or very similar
+    return size_stem in buffer_stem or buffer_stem in size_stem or len(size_stem) < 3 or len(buffer_stem) < 3

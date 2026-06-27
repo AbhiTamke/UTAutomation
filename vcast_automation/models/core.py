@@ -28,6 +28,20 @@ class ParameterModel:
     safe_placeholder_value: str | None = None
     value_confidence: str = "low"
     diagnostics: list[Diagnostic] = field(default_factory=list)
+    # New fields for richer generation and safety
+    base_type: str = ""
+    pointer_depth: int = 0
+    array_length_param: str = ""
+    size_dependency_on: str = ""
+    enum_values: list[str] = field(default_factory=list)
+    domain_min: str | None = None
+    domain_max: str | None = None
+    allow_null: bool = False
+    allow_nan: bool = False
+    allow_inf: bool = False
+    allow_invalid_enum: bool = False
+    alias_group: str = ""
+    dependency_tags: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -46,6 +60,13 @@ class ConditionModel:
     input_confidence: str = "low"
     coverage_confidence: str = "intent-only"
     diagnostics: list[Diagnostic] = field(default_factory=list)
+    # New fields for extracted constraints
+    operator: str = ""
+    lhs_symbol: str = ""
+    rhs_literal: str = ""
+    constraint_candidates: list[str] = field(default_factory=list)
+    is_potentially_unreachable: bool = False
+    unreachable_reason: str = ""
 
 
 @dataclass
@@ -93,6 +114,12 @@ class FunctionModel:
     parser_confidence: str = "medium"
     qualification_confidence: str = "low"
     diagnostics: list[Diagnostic] = field(default_factory=list)
+    # New fields for analysis/planning support
+    static_state_vars: list[str] = field(default_factory=list)
+    input_dependencies: list[dict[str, str]] = field(default_factory=list)
+    probe_points: list[str] = field(default_factory=list)
+    environment_tags: list[str] = field(default_factory=list)
+    stub_targets: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -110,6 +137,11 @@ class SourceFileModel:
     enums: list[str] = field(default_factory=list)
     functions: list[FunctionModel] = field(default_factory=list)
     diagnostics: list[Diagnostic] = field(default_factory=list)
+    # New fields for execution/config metadata
+    compiler_profile: dict[str, str] = field(default_factory=dict)
+    environment_name: str = ""
+    cfg_path: str = ""
+    env_path: str = ""
 
 
 @dataclass
@@ -128,6 +160,11 @@ class TraceabilityRecord:
     source: str = ""
     match_confidence: str = "none"
     match_status: str = "missing"
+    # New fields for traceability clarity
+    rule_source: str = ""
+    override_source: str = ""
+    seed: str = ""
+    coverage_target: str = ""
 
 
 @dataclass
@@ -169,6 +206,26 @@ class TestCasePlan:
     coverage_confidence: str = "intent-only"
     traceability_status: str = "unresolved"
     diagnostics: list[Diagnostic] = field(default_factory=list)
+    # New fields for staged generation, safety, dependencies, and advanced features
+    generation_stage: str = "baseline"
+    feedback_iteration: int = 0
+    seed: int | None = None
+    safety_profile_name: str = ""
+    environment_profile_name: str = ""
+    dependency_edges: list[str] = field(default_factory=list)
+    rejected_values: list[str] = field(default_factory=list)
+    pointer_setup_lines: list[str] = field(default_factory=list)
+    global_init_lines: list[str] = field(default_factory=list)
+    state_restore_lines: list[str] = field(default_factory=list)
+    stub_profile: str = ""
+    stub_behavior_lines: list[str] = field(default_factory=list)
+    validator_messages: list[str] = field(default_factory=list)
+    coverage_targets: list[str] = field(default_factory=list)
+    template_version: str = "v1"
+    override_source: str = ""
+    rule_source: str = ""
+    is_negative_test: bool = False
+    requires_manual_review: bool = False
 
 
 @dataclass
@@ -181,6 +238,11 @@ class TstDocument:
     script_features: list[str] = field(default_factory=list)
     diagnostics: list[Diagnostic] = field(default_factory=list)
     validation_status: str = "not_run"
+    # New fields for artifact references and validation state
+    env_output_path: str = ""
+    cfg_output_path: str = ""
+    execution_summary: dict[str, str] = field(default_factory=dict)
+    coverage_summary: dict[str, str] = field(default_factory=dict)
 
 
 def dataclass_to_dict(obj: Any) -> Any:

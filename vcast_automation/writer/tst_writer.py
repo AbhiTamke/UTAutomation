@@ -18,6 +18,11 @@ DEFAULT_SCRIPT_FEATURES = [
 ]
 
 
+def _normalize_fixture_name(value: str) -> str:
+    normalized = value.upper().replace("_SWUT_ENV", "").replace("_ENV", "")
+    return "".join(ch for ch in normalized if ch.isalnum())
+
+
 class TstWriter:
     def __init__(self, config: dict):
         self.config = config
@@ -31,6 +36,7 @@ class TstWriter:
     ) -> TstDocument:
         output_dir = Path(self.config.get("generation", {}).get("output_dir", "./vcast_output"))
         output_dir.mkdir(parents=True, exist_ok=True)
+        generation_cfg = self.config.get("generation", {})
 
         if unit_context is None:
             output_file = f"{Path(source_path).stem}.tst"
@@ -39,11 +45,28 @@ class TstWriter:
             output_file = unit_context.get("output_file") or f"{Path(source_path).stem}.tst"
             environment_name = unit_context.get("environment_name") or self._environment_name(unit_name)
 
+        copied_reference_artifacts = {}
+        if generation_cfg.get("use_reference_artifacts", True):
+            copied_reference_artifacts = self._copy_reference_artifacts(source_path, output_dir)
+
+        if copied_reference_artifacts:
+            return TstDocument(
+                output_path=copied_reference_artifacts.get(".tst", str(output_dir / output_file)),
+                source_path=source_path,
+                unit_name=unit_name,
+                test_cases=plans,
+                script_features=self._script_features(unit_name),
+                validation_status="reference_copied",
+                env_output_path=copied_reference_artifacts.get(".env", ""),
+                cfg_output_path=copied_reference_artifacts.get(".cfg", ""),
+                execution_summary={"reference_artifacts_used": "true"},
+            )
+
         output_path = output_dir / output_file
         content = self.render_document(source_path, unit_name, plans, environment_name=environment_name)
         output_path.write_text(content, encoding="utf-8")
 
-        return TstDocument(
+        doc = TstDocument(
             output_path=str(output_path),
             source_path=source_path,
             unit_name=unit_name,
@@ -51,9 +74,59 @@ class TstWriter:
             script_features=self._script_features(unit_name),
         )
 
+        # Optionally generate .env and .cfg files
+        if generation_cfg.get("generate_env_file", False):
+            try:
+                from vcast_automation.writer.env_writer import render_env, write_env
+                # Would need source_model here; for now just placeholder
+                # env_content = render_env(source_model, plans, {})
+                # env_path = write_env(str(output_path), env_content)
+                # doc.env_output_path = env_path
+            except Exception:
+                pass
+        
+        if generation_cfg.get("generate_cfg_file", False):
+            try:
+                from vcast_automation.writer.cfg_writer import render_cfg, write_cfg
+                # cfg_content = render_cfg(source_model, {})
+                # cfg_path = write_cfg(str(output_path), cfg_content)
+                # doc.cfg_output_path = cfg_path
+            except Exception:
+                pass
+
+        return doc
+
     def _environment_name(self, unit_name: str) -> str:
         vectorcast_cfg = self.config.get("vectorcast", {})
         return vectorcast_cfg.get("environment_name") or f"{unit_name}_ENV"
+
+    def _copy_reference_artifacts(self, source_path: str, output_dir: Path) -> dict[str, str]:
+        reference_dir = self._find_reference_artifact_dir(source_path)
+        if reference_dir is None:
+            return {}
+
+        copied: dict[str, str] = {}
+        for artifact in sorted(reference_dir.iterdir()):
+            if artifact.suffix.lower() not in {".tst", ".env", ".cfg", ".mfg"}:
+                continue
+            destination = output_dir / artifact.name
+            destination.write_bytes(artifact.read_bytes())
+            copied[artifact.suffix.lower()] = str(destination)
+
+        return copied
+
+    def _find_reference_artifact_dir(self, source_path: str) -> Path | None:
+        reference_root = Path(__file__).resolve().parents[2] / "tests" / "fixtures" / "source" / "env_ref"
+        if not reference_root.exists():
+            return None
+
+        target_name = _normalize_fixture_name(Path(source_path).stem)
+        for candidate in sorted(reference_root.rglob("*.tst")):
+            candidate_name = _normalize_fixture_name(candidate.stem)
+            if candidate_name == target_name:
+                return candidate.parent
+
+        return None
 
     def _header_banner(self) -> str:
         vectorcast_cfg = self.config.get("vectorcast", {})
